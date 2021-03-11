@@ -1,0 +1,11 @@
+name: acona theme
+description: Drupal theme for acona, based on Olivero
+logo: logo.png
+core: 8.x
+core_version_requirement: ^8 || ^9
+engine: twig
+type: theme
+base theme: olivero
+
+libraries:
+  - acona/global-css

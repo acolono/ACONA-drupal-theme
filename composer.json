@@ -1,0 +1,6 @@
+{
+  "name": "ao/acona",
+  "description": "Drupal theme for acona, based on Olivero.",
+  "type": "drupal-theme",
+  "license": "GPL-2.0-or-later"
+}

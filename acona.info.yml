@@ -9,3 +9,8 @@ base theme: olivero
 
 libraries:
   - acona/global-css
+
+libraries-override:
+  # Remove some libraries from olivero.
+  olivero/tags: false
+  olivero/debug: false

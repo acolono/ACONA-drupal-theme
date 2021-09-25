@@ -1,0 +1,65 @@
+<?php
+
+use Drupal\views\Views;
+
+/**
+ * Helper function to load a view.
+ *
+ * @param $id
+ *    View ID.
+ * @param $display
+ *    View display ID.
+ * @param array $args
+ *    Views arguments
+ *
+ * @param boolean $showEmpty
+ *    When false and view is empty nothing will be returned
+ *
+ * @return array
+ *    Render array
+ */
+function acona_load_view($id, $display, $args = [], $showEmpty = TRUE) {
+
+  /** @var Drupal\views\ViewExecutable $view */
+  $view = Views::getView($id);
+
+  if (empty($view->id())) {
+    return [];
+  }
+
+  $view->setArguments($args);
+
+  if ($showEmpty) {
+    $view->setDisplay($display);
+    return $view->buildRenderable();
+  }
+
+  $view->get_total_rows = TRUE;
+  $view->execute($display);
+  $rows = $view->total_rows;
+
+  if (!empty($rows)) {
+    $view->setDisplay($display);
+    return $view->buildRenderable();
+  }
+  return [];
+}
+
+/*
+ * Implementation of hook_preprocess_user().
+ */
+function acona_preprocess_user(&$variables) {
+  // Provide variable to list domains by user.
+  // Todo: List domains for all users that have access, not only for creators.
+  $variables['domains'] = acona_load_view('acona_domains', 'block_1');
+}
+
+/*
+ * Implementation of hook_preprocess_group().
+ */
+function acona_preprocess_group(&$variables) {
+  // Provide variable to list urls by domain.
+  $variables['urls'] = acona_load_view('acona_urls', 'block_1');
+  $variables['page_types'] = acona_load_view('acona_page_types', 'block_1');
+  $variables['services'] = acona_load_view('acona_services', 'block_1');
+}

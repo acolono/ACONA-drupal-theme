@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - acona
-id: acona_local_tasks
-theme: acona
-region: content
-weight: -40
+    - acona_theme
+id: acona_theme_primary_local_tasks
+theme: acona_theme
+region: highlighted
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Tabs
+  label: 'Primary tabs'
   provider: core
   label_display: '0'
   primary: true
-  secondary: true
+  secondary: false
 visibility: {  }

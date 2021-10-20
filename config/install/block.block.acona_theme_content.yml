@@ -4,16 +4,16 @@ dependencies:
   module:
     - system
   theme:
-    - acona
-id: acona_breadcrumbs
-theme: acona
-region: breadcrumb
+    - acona_theme
+id: acona_theme_content
+theme: acona_theme
+region: content
 weight: 0
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_main_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_main_block
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

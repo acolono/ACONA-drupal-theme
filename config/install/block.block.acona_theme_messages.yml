@@ -4,11 +4,11 @@ dependencies:
   module:
     - system
   theme:
-    - acona
-id: acona_messages
-theme: acona
+    - acona_theme
+id: acona_theme_messages
+theme: acona_theme
 region: highlighted
-weight: 0
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:

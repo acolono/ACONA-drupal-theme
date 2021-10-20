@@ -6,11 +6,11 @@ dependencies:
   module:
     - system
   theme:
-    - acona
-id: acona_account_menu
-theme: acona
+    - acona_theme
+id: acona_theme_account_menu
+theme: acona_theme
 region: secondary_menu
-weight: 0
+weight: -4
 provider: null
 plugin: 'system_menu_block:account'
 settings:

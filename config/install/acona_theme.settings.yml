@@ -5,9 +5,8 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: themes/contrib/acona/images/logo--white.svg
+  path: themes/contrib/acona_theme/images/logo--white.svg
 favicon:
   use_default: 1
 mobile_menu_all_widths: 0
 site_branding_bg_color: default
-debug: 0

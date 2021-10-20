@@ -8,7 +8,7 @@ type: theme
 base theme: olivero
 
 libraries:
-  - acona/global-css
+  - acona_theme/global-css
 
 regions:
   header: Header

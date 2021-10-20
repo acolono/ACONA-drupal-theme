@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - acona
-id: acona_page_title
-theme: acona
-region: content
-weight: -50
+    - acona_theme
+id: acona_theme_page_title
+theme: acona_theme
+region: content_above
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
